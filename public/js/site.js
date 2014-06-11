@@ -1,5 +1,9 @@
 var socket = io();
-var map = L.mapbox.map('map', 'bobbysud.ig375fji')
+var map = L.mapbox.map('map', 'bobbysud.ig375fji', {
+    tileLayer: {
+        detectRetina: true
+    }
+})
     .setView([0, 0], 2);
 
 function getRandomColor() {
