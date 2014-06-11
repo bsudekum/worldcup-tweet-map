@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>World Cup Tweets</title>
+  <link rel='stylesheet' href='https://www.mapbox.com/base/latest/base.css'>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
+  <style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+  .display-block { display: block; }
+  .leaflet-popup-content { display:block; }
+  .leaflet-popup-content:after {
+    content:'';
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+  }
+  </style>
+</head>
+
+<body>
+  <div class='col12 center loading'></div>
+  <div id='map'></div>
+  <div class='pin-right pad1'><h3 class='pad2 fill-blue dark'>Realtime Geolocated world cup tweets</h3></div>
+  <script src='/socket.io/socket.io.js'></script>
+  <script src='../js/masonry.js'></script>
+  <script src='//code.jquery.com/jquery-1.11.1.js'></script>
+  <script src='../js/timeago.js'></script>
+  <script src='../js/site.js'></script>
+</body>
+
+</html>
